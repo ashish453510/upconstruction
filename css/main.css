@@ -19,8 +19,8 @@
 /* Colors */
 :root {
   --color-default: #364d59;
-  --color-primary: #feb900;
-  --color-secondary: #52565e;
+  --color-primary: #c02a69;
+  --color-secondary: #2A69C0;
 }
 
 /* Smooth scroll behavior */
@@ -188,7 +188,7 @@ section {
 }
 
 .scroll-top:hover {
-  background: #ffc732;
+  background: var(--color-secondary);
   color: #fff;
 }
 
@@ -288,6 +288,24 @@ section {
 
 .header .logo h1 span {
   color: var(--color-primary);
+}
+
+.intro h3:before,
+.intro h3:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: var(--color-primary);
+  display: inline-block;
+  
+}
+div#quality-box, div#mission-vission {
+  margin: 0;
+  background: #efefef40;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 10px var(--color-primary);
+  /* min-height: 360px; */
 }
 
 /*--------------------------------------------------------------
@@ -677,7 +695,7 @@ section {
 }
 
 .get-started .php-email-form button[type=submit]:hover {
-  background: rgba(254, 185, 0, 0.8);
+  background: var(--color-secondary);
 }
 
 @-webkit-keyframes animate-loading {
@@ -1208,9 +1226,9 @@ section {
 @media (min-width: 991px) {
   .about h2 {
     /* max-width: 65%; */
-    margin: 0 0 80px 0;
+    /* margin: 0 0 80px 0; */
   }
-  .about .container2 {
+  .about .span {
     padding-left: 35%;
     margin: 0 0 80px 0;
   }
@@ -1221,17 +1239,18 @@ section {
 }
 
 .about .our-story,.our-story2 {
-  padding: 40px;
+  /* padding: 40px; */
   background-color: #f5f6f7;
 }
 
+
 @media (min-width: 991px) {
-  .about .our-story {
+  /* .about .our-story {
     padding-right: 35%;
   }
   .about .our-story2 {
     padding-left: 35%;
-  }
+  } */
 }
 
 .about .our-story h4 {
@@ -1890,14 +1909,14 @@ section {
 
 .hero .carousel {
   width: 100%;
-  min-height: 100vh;
-  padding: 80px 0;
+  /* min-height: 100vh; */
+  padding: 25px 0;
   margin: 0;
   position: relative;
 }
 
 .hero .carousel-item {
-  position: absolute;
+  position: relative;
   inset: 0;
   background-size: cover;
   background-position: center;
@@ -1905,13 +1924,6 @@ section {
   overflow: hidden;
   z-index: 1;
   transition-duration: 0.4s;
-}
-
-.hero .carousel-item::before {
-  content: "";
-  /* background-color: rgba(0, 0, 0, 0.7); */
-  position: absolute;
-  inset: 0;
 }
 
 .hero .info {
@@ -2010,6 +2022,14 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 640px) {
+    .hero .carousel-control-next-icon,
+    .hero .carousel-control-prev-icon {
+        font-size: 20px; /* Decrease font size */
+        width: 34px; /* Decrease width */
+        height: 34px; /* Decrease height */
+    }
 }
 
 .hero .carousel-control-prev,
@@ -2606,11 +2626,17 @@ section {
 --------------------------------------------------------------*/
 .footer {
   color: #fff;
-  background: url("../img/footer-bg.jpg") top center no-repeat;
+  background: royalblue;
   background-size: cover;
   font-size: 14px;
   padding: 80px 0 60px 0;
   position: relative;
+}
+
+.row.footer-img-logo {
+  /* width: 60rem; */
+  padding: 0 0 25px;
+  max-width: fit-content;
 }
 
 .footer:before {
